@@ -29,7 +29,10 @@ const noteSchema = new Schema(
       ],
     },
   },
-  { timeStamps: true },
+  {
+    timestamps: true,
+    versionKey: false,
+  },
 );
 
 export const Note = model('Note', noteSchema);
