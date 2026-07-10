@@ -28,3 +28,12 @@ export const createNoteSchema = {
     tag: Joi.string().valid(TAGS),
   }),
 };
+
+export const updateNoteSchema = {
+    [Segments.PARAMS]: Joi.object({
+        ...noteIdSchema,
+    }),
+    [Segments.BODY]: Joi.object({
+        ...createNoteSchema
+    }).min(1),
+};
