@@ -19,7 +19,7 @@ export const setSessionCookies = (res, session) => {
   res.cookie('accessToken', session.accessToken, {
     httpOnly: true,
     secure: true,
-    sameSite: true,
+    sameSite: 'none',
     maxAge: FIFTEEN_MINUTES,
   });
     
