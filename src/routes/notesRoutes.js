@@ -16,6 +16,8 @@ import {
 
 const router = Router();
 
+router.use('/notes',);
+
 router.get('/notes', celebrate(getAllNotesSchema), getAllNotes);
 router.get('/notes/:noteId', celebrate(noteIdSchema), getNoteById);
 router.post('/notes', celebrate(createNoteSchema), createNote);
